@@ -1,0 +1,132 @@
+/* General Styles */
+body {
+    margin: 0;
+    background-color: black;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+/* Navigation bar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 70px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.left-nav .nav-item {
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+}
+
+.right-nav {
+    display: flex;
+    gap: 30px;
+}
+
+.right-nav .nav-item {
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.right-nav .nav-item:hover {
+    color: gray;
+}
+
+/* About Section */
+.about-section {
+    margin-top: 80px;
+    margin-left: 100px; /* Align with navbar */
+    margin-right: 100px;
+}
+
+.section-title {
+    font-size: 48px;
+    font-weight: 800;
+    color: white;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 248.5px; 
+    height: 5px;
+    background: linear-gradient(90deg, #72253D, #FBF2B1); /* Same gradient as the title */
+    margin-top: -19.5px;
+    margin-bottom: 40px;
+    border-radius: 2px; 
+}
+
+/* About Content Container */
+.content-container {
+    display: flex;
+    gap: 40px; 
+    flex-wrap: wrap; 
+}
+
+/* About Text Box */
+.about-text {
+    display: flex;
+    flex-direction: column;
+    max-width: 350px; 
+    border-radius: 7px;
+    border: 2px solid transparent;
+    background: linear-gradient(black, black) padding-box, linear-gradient(90deg, #F4426C, #FBF2B1) border-box;
+    padding: 20px;
+    font-size: 14px; 
+    line-height: 1.5;
+    position: relative;
+}
+
+/* Skills Section */
+.skills {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px; /* Smaller width */
+    max-height: 256px;
+    border-radius: 7px;
+    border: 2px solid transparent;
+    background: linear-gradient(black, black) padding-box, linear-gradient(90deg, #F4426C, #FBF2B1) border-box;
+    padding: 15px;
+    position: relative;
+}
+
+.skills-title {
+    font-size: 20px; /* Slightly smaller title */
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-left: 25px;
+    margin-right: 25px;
+    justify-content: center; /* Center skill tags */
+}
+
+/* Skill Tags */
+.skill {
+    background-color: #72253D;
+    color: white;
+    padding: 8px 12px; /* Smaller padding */
+    border-radius: 15px;
+    font-size: 12px; /* Smaller font size */
+    font-weight: 600;
+    white-space: nowrap; /* Prevent text wrapping */
+    transition: transform 0.2s;
+}
+
+.skill:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+

@@ -1,0 +1,155 @@
+/* General body styles */
+body {
+    margin: 0;
+    background-color: black;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+/* Background wrapper */
+.background {
+    width: 100%;
+}
+
+/* Navigation bar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 70px; 
+    margin-left: 100px; 
+    margin-right: 100px;
+}
+
+.left-nav .nav-item {
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+}
+
+.right-nav {
+    display: flex;
+    gap: 30px;
+}
+
+.right-nav .nav-item {
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.right-nav .nav-item:hover {
+    color: gray;
+}
+
+/* Introduction section styles */
+.intro {
+    margin-left: 100px;
+    margin-top: 120px;
+    color: #D9D9D9;
+}
+
+.hello {
+    font-size: 38px;
+    font-weight: 800; 
+    margin: 0;
+}
+
+.iam {
+    font-size: 47px;
+    font-weight: 800;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.highlight {
+    color: #B4975A; 
+}
+
+.university-line {
+    font-size: 47px;
+    font-weight: 800;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.highlight2 {
+    font-size: 47px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #72253D 0%, #B4975A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    display: inline-block; 
+}
+
+
+.studying {
+    font-size: 47px;
+    font-weight: 800;
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* Container for the buttons */
+.buttons-container {
+    display: flex;
+    gap: 20px; /* Spacing between buttons */
+    margin-top: 50px; /* Adjust space from content above */
+    margin-left: 100px;
+}
+
+/* Button Styling */
+.button {
+    display: flex;
+    align-items: center; /* Vertically center text and icon */
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-family: "Poppins-Regular", Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 540;
+    width: 200px;
+    height: 50px;
+    border-radius: 7px;
+    border: 2px solid transparent; /* Base border */
+    background: linear-gradient(black, black) padding-box, linear-gradient(90deg, #F4426C, #FBF2B1) border-box;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Inner Content */
+.button span {
+    display: flex;
+    align-items: center; /* Align text and icon vertically */
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: black; /* Inner button background */
+    border-radius: 5px; /* Slightly smaller radius for inner content */
+}
+
+/* Icon Styling */
+.icon1 {
+    width: 20px;
+    height: 20px; 
+    margin-right: 5px;
+    margin-top: -2px
+}
+
+.icon {
+    width: 20px; /* Icon size */
+    height: 20px;
+    filter: invert(1); /* Makes icons white */
+    margin-right: 8px; /* Adds spacing between the icon and text */
+}
+
+/* Hover Effect */
+.button:hover {
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+    background: linear-gradient(black, black) padding-box, linear-gradient(90deg, #FFC371, #FF5F6D) border-box;
+}
+
