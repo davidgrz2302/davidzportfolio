@@ -12,7 +12,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-top: 70px;
-    margin-left: 100px; /* Align the navbar margins */
+    margin-left: 100px; 
     margin-right: 100px;
 }
 
@@ -43,29 +43,29 @@ body {
 /* Education Section */
 .about-section {
     margin-top: 80px;
-    margin-left: 100px; /* Same margin as navbar */
+    margin-left: 100px; 
     margin-right: 100px;
 }
 
 .section-title {
     font-size: 48px;
     font-weight: 800;
-    text-align: left; /* Align with HOME */
+    text-align: left; 
     color:white;
     margin-bottom: 0;
-    margin-left: -2px; /* Ensure it starts exactly at the left margin */
+    margin-left: -2px; 
 }
 
 .section-title::after {
     content: '';
     display: block;
-    width: 100%; /* Match the width of the section */
-    max-width: 282.3px; /* Limit width to align with the text */
+    width: 100%; 
+    max-width: 282.3px; 
     height: 5px;
     background: linear-gradient(90deg, #72253D, #FBF2B1);
-    margin-top: -20px; /* Add slight spacing below the text */
+    margin-top: -20px; 
     margin-bottom: 40px;
-    margin-left: 2px; /* Remove any offset */
+    margin-left: 2px; 
     border-radius: 2px;
 }
 
@@ -74,15 +74,15 @@ body {
 .content-container {
     display: flex;
     gap: 40px;
-    justify-content: flex-start; /* Align cards with the left edge of the section */
-    margin-top: 30px; /* Add spacing below the title */
+    justify-content: flex-start; 
+    margin-top: 30px; 
 }
 
 /* Education Card */
 .about-text {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align text to the left */
+    align-items: flex-start; 
     max-width: 350px;
     border-radius: 7px;
     border: 2px solid transparent;
@@ -97,9 +97,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white; /* White background for Pierce and USC logos */
-    width: 80px; /* Adjust size */
-    height: 90px; /* Keep it square */
+    background-color: white; 
+    width: 80px; 
+    height: 90px; 
     border-radius: 5px;
 }
 

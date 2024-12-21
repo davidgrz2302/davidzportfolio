@@ -43,7 +43,7 @@ body {
 /* About Section */
 .about-section {
     margin-top: 80px;
-    margin-left: 100px; /* Align with navbar */
+    margin-left: 100px; 
     margin-right: 100px;
 }
 
@@ -58,7 +58,7 @@ body {
     display: block;
     width: 248.5px; 
     height: 5px;
-    background: linear-gradient(90deg, #72253D, #FBF2B1); /* Same gradient as the title */
+    background: linear-gradient(90deg, #72253D, #FBF2B1); 
     margin-top: -19.5px;
     margin-bottom: 40px;
     border-radius: 2px; 
@@ -89,7 +89,7 @@ body {
 .skills {
     display: flex;
     flex-direction: column;
-    max-width: 400px; /* Smaller width */
+    max-width: 400px; 
     max-height: 256px;
     border-radius: 7px;
     border: 2px solid transparent;
@@ -99,7 +99,7 @@ body {
 }
 
 .skills-title {
-    font-size: 20px; /* Slightly smaller title */
+    font-size: 20px; 
     font-weight: 800;
     margin-bottom: 20px;
     text-align: center;
@@ -111,22 +111,22 @@ body {
     gap: 10px;
     margin-left: 25px;
     margin-right: 25px;
-    justify-content: center; /* Center skill tags */
+    justify-content: center; 
 }
 
 /* Skill Tags */
 .skill {
     background-color: #72253D;
     color: white;
-    padding: 8px 12px; /* Smaller padding */
+    padding: 8px 12px; 
     border-radius: 15px;
-    font-size: 12px; /* Smaller font size */
+    font-size: 12px; 
     font-weight: 600;
-    white-space: nowrap; /* Prevent text wrapping */
+    white-space: nowrap; 
     transition: transform 0.2s;
 }
 
 .skill:hover {
-    transform: scale(1.1); /* Slight zoom on hover */
+    transform: scale(1.1); 
 }
 

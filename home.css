@@ -96,15 +96,15 @@ body {
 /* Container for the buttons */
 .buttons-container {
     display: flex;
-    gap: 20px; /* Spacing between buttons */
-    margin-top: 50px; /* Adjust space from content above */
+    gap: 20px; 
+    margin-top: 50px; 
     margin-left: 100px;
 }
 
 /* Button Styling */
 .button {
     display: flex;
-    align-items: center; /* Vertically center text and icon */
+    align-items: center; 
     justify-content: center;
     text-decoration: none;
     color: white;
@@ -114,7 +114,7 @@ body {
     width: 200px;
     height: 50px;
     border-radius: 7px;
-    border: 2px solid transparent; /* Base border */
+    border: 2px solid transparent; 
     background: linear-gradient(black, black) padding-box, linear-gradient(90deg, #F4426C, #FBF2B1) border-box;
     text-align: center;
     transition: all 0.3s ease;
@@ -124,12 +124,12 @@ body {
 /* Inner Content */
 .button span {
     display: flex;
-    align-items: center; /* Align text and icon vertically */
+    align-items: center; 
     justify-content: center;
     width: 100%;
     height: 100%;
-    background: black; /* Inner button background */
-    border-radius: 5px; /* Slightly smaller radius for inner content */
+    background: black; 
+    border-radius: 5px; 
 }
 
 /* Icon Styling */
@@ -141,15 +141,15 @@ body {
 }
 
 .icon {
-    width: 20px; /* Icon size */
+    width: 20px; 
     height: 20px;
-    filter: invert(1); /* Makes icons white */
-    margin-right: 8px; /* Adds spacing between the icon and text */
+    filter: invert(1); 
+    margin-right: 8px; 
 }
 
 /* Hover Effect */
 .button:hover {
-    transform: scale(1.05); /* Slightly enlarge button on hover */
+    transform: scale(1.05); 
     background: linear-gradient(black, black) padding-box, linear-gradient(90deg, #FFC371, #FF5F6D) border-box;
 }
 

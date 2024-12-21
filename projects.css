@@ -12,7 +12,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-top: 70px;
-    margin-left: 100px; /* Align navigation with other sections */
+    margin-left: 100px; 
     margin-right: 100px;
 }
 
@@ -43,28 +43,28 @@ body {
 /* Projects Section */
 .projects-section {
     margin-top: 80px;
-    margin-left: 100px; /* Align with navbar */
-    margin-right: 100px; /* Align with navbar */
+    margin-left: 100px; 
+    margin-right: 100px; 
 }
 
 .section-title {
     font-size: 48px;
     font-weight: 800;
-    text-align: left; /* Align with HOME */
+    text-align: left; 
     color:white;
     margin-bottom: 0;
-    margin-left: -2px; /* Ensure it starts exactly at the left margin */
+    margin-left: -2px; 
 }
 
 .section-title::after {
     content: '';
     display: block;
-    max-width: 384.3px; /* Limit width to align with the text */
+    max-width: 384.3px; 
     height: 5px;
     background: linear-gradient(90deg, #72253D, #FBF2B1);
-    margin-top: -20px; /* Add slight spacing below the text */
+    margin-top: -20px; 
     margin-bottom: 40px;
-    margin-left: 2px; /* Remove any offset */
+    margin-left: 2px; 
     border-radius: 2px;
 }
 
@@ -78,7 +78,7 @@ body {
 .projects-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px; /* Space between project cards */
+    gap: 40px; 
 }
 
 /* Project Card */
@@ -104,12 +104,12 @@ body {
 }
 
 .project-image {
-    width: 100%; /* Let the width adjust to the container */
-    height: 200px; /* Set a fixed height for all images */
-    object-fit: cover; /* Ensures images fill the container without distortion */
-    border-radius: 20px; /* Rounded corners */
-    border: 1px solid #FBF2B1; /* Border color and thickness */
-    box-sizing: border-box; /* Include the border in the dimensions */
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 20px; 
+    border: 1px solid #FBF2B1; 
+    box-sizing: border-box; 
 }
 
 
@@ -151,12 +151,12 @@ body {
 .icon {
     width: 24px;
     height: 24px;
-    filter: invert(1); /* Makes the icon white */
+    filter: invert(1); 
     cursor: pointer;
 }
 
 .icon:hover {
-    transform: scale(1.1); /* Slight zoom effect */
+    transform: scale(1.1); 
     transition: transform 0.2s;
 }
 

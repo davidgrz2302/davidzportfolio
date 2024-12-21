@@ -12,7 +12,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-top: 70px;
-    margin-left: 100px; /* Align the navbar margins */
+    margin-left: 100px; 
     margin-right: 100px;
 }
 
@@ -52,17 +52,17 @@ body {
 .section-title {
     font-size: 48px;
     font-weight: 800;
-    text-align: left; /* Align with HOME */
+    text-align: left; 
     color:white;
     margin-bottom: 20px;
-    margin-left: -2px; /* Ensure it starts exactly at the left margin */
+    margin-left: -2px; 
 }
 
 /* Form Styling */
 .contact-form {
     display: flex;
     flex-direction: column;
-    width: 40%; /* Adjust form width */
+    width: 40%; 
     border: 2px solid transparent;
     border-radius: 15px;
     padding: 20px;
