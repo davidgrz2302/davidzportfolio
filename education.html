@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Education</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+    <title>My Education</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="education.css">
 </head>
 <body>
@@ -25,39 +23,49 @@
         </nav>
 
         <!-- Education Section -->
-        <div class="about-section">
-            <h1 class="section-title">EDUCATION</h1>
-            <div class="content-container">
-                <!-- First Education Card -->
-                <div class="about-text">
-                    <div class="logo-container">
-                        <img src="./pngs/piercelogo.png" alt="Pierce Logo" class="pierce">
-                    </div>
-                    <h2 class="edu-title">LOS ANGELES PIERCE COLLEGE</h2>
-                    <p class="edu-dates">Aug 2021 – July 2023</p>
-                    <p class="edu-degree">Associate of Science</p>
-                    <p class="edu-description">
-                        Associate of Arts in General Studies: Social and Behavioral Sciences,<br>
-                        Associate of Arts in General Studies: Science, Technology, Engineering, and Mathematics,<br>
-                        Associate of Science for Transfer: Mathematics, Algebra, and Introduction to General Chemistry
-                    </p>
+        <section class="education-section">
+            <h1 class="section-title">
+                <span class="about-light">MY</span> <span class="about-bold">EDUCATION</span>
+            </h1> 
+            
+            <div class="education-card">
+                <div class="logo">
+                    <img src="/pngs/piercelogo.png" alt="Pierce College Logo">
                 </div>
-
-                <!-- Second Education Card -->
-                <div class="about-text">
-                    <img src="./pngs/usclogo.png" alt="USC Logo" class="usc">
-                    <h2 class="edu-title">UNIVERSITY OF SOUTHERN CALIFORNIA</h2>
-                    <p class="edu-dates">Aug 2023 – Present</p>
-                    <p class="edu-degree">Bachelor of Computer Science</p>
-                    <p class="edu-description">
-                        Relevant Coursework: Introduction to Programming, Data Structures and Object-Oriented Design,<br>
-                        Introduction to Embedded Systems, iOS App Development, Cross-Platform App Development,<br>
-                        Human-Computer Interaction, Probability Theory, Linear Algebra
-                    </p>
+                <div class="education-details">
+                    <div class="school-info">
+                        <h2 class="college-name">LOS ANGELES PIERCE COLLEGE</h2>
+                        <h3 class="degree">Associate of Science</h3>
+                        <p class="details">
+                            Associate of Arts in General Studies: Social and Behavioral Sciences,<br>
+                            Associate of Arts in General Studies: Science, Technology, Engineering, and Mathematics,<br>
+                            Associate of Science for Transfer: Mathematics, Algebra, and Introduction to General Chemistry
+                        </p>
+                    </div>
+                    <div class="education-date">Aug 2021 - July 2023</div>
                 </div>
             </div>
-        </div>
+
+            <div class="education-card">
+                <div class="usclogo">
+                    <img src="/pngs/usclogo.png" alt="USC Logo">
+                </div>
+                <div class="education-details">
+                    <div class="school-info">
+                        <h2 class="college-name">UNIVERSITY OF SOUTHERN CALIFORNIA</h2>
+                        <h3 class="degree">Bachelor of Computer Science</h3>
+                        <p class="details">
+                            Relevant Coursework: Introduction to Programming, Data Structures and Object-Oriented Design, Introduction to Embedded Systems, iOS App Development, Cross-Platform App Development, Human-Computer Interaction, Probability Theory
+                        </p>
+                    </div>
+                    <div class="education-date">Aug 2023 - Present</div>
+                </div>
+            </div>
+        </section>
     </div>
 </body>
 </html>
+
+
+
 

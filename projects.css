@@ -2,16 +2,21 @@
 body {
     margin: 0;
     background-color: black;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Sora', sans-serif;
     color: white;
 }
 
-/* Navigation Bar */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Navigation bar styles */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 70px;
+    margin-top: 70px; 
     margin-left: 100px; 
     margin-right: 100px;
 }
@@ -40,101 +45,134 @@ body {
     color: gray;
 }
 
-/* Projects Section */
+/* Education Section */
 .projects-section {
-    margin-top: 80px;
-    margin-left: 100px; 
-    margin-right: 100px; 
+    text-align: center;
+    margin: 50px 0;
 }
 
 .section-title {
-    font-size: 48px;
+    font-size: 36px;
     font-weight: 800;
-    text-align: left; 
-    color:white;
-    margin-bottom: 0;
-    margin-left: -2px; 
-}
-
-.section-title::after {
-    content: '';
-    display: block;
-    max-width: 384.3px; 
-    height: 5px;
-    background: linear-gradient(90deg, #72253D, #FBF2B1);
-    margin-top: -20px; 
     margin-bottom: 40px;
-    margin-left: 2px; 
-    border-radius: 2px;
 }
 
-.highlight {
-    background: linear-gradient(90deg, #FF5F6D, #FFC371);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.projects-bold {
+    font-family: 'Sora', sans-serif; 
+    font-weight: 650; 
+    font-size: 36px;
+    text-transform: uppercase;
 }
 
-/* Projects Container */
-.projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px; 
+.projects-light {
+    font-family: 'Sora', sans-serif; 
+    font-weight: 300; 
+    font-size: 36px;
+    text-transform: uppercase;
 }
 
-/* Project Card */
-.project-card {
+.projects-card {
     display: flex;
-    flex-direction: column;
-    text-align: left;
-    border-radius: 20px;
-    border: 2px solid transparent;
-    background: linear-gradient(black, black) padding-box, linear-gradient(90deg, #F4426C, #FBF2B1) border-box;
-    padding: 20px;
+    align-items: flex-start;
+    background: linear-gradient(#27272A, #27272A) padding-box, 
+    linear-gradient(90deg, #F4426C, #FBF2B1) border-box;
+    border-radius: 15px;
+    border: 3px solid transparent;
+    padding: 20px 30px;
+    margin-bottom: 40px;
+    gap: 20px;
+    max-width: 890px;
+    height: 230px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.project-card1 {
+.projects-cardlast {
     display: flex;
-    flex-direction: column;
-    text-align: left;
-    border-radius: 20px;
-    border: 2px solid transparent;
-    background: linear-gradient(black, black) padding-box, linear-gradient(90deg, #F4426C, #FBF2B1) border-box;
-    padding: 20px;
-    margin-bottom: 50px;
+    align-items: flex-start;
+    background: linear-gradient(#27272A, #27272A) padding-box, 
+    linear-gradient(90deg, #F4426C, #FBF2B1) border-box;
+    border-radius: 15px;
+    border: 3px solid transparent;
+    padding: 20px 30px;
+    margin-bottom: 70px;
+    gap: 20px;
+    max-width: 890px;
+    height: 230px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.project-image {
-    width: 100%; 
-    height: 200px; 
-    object-fit: cover; 
-    border-radius: 20px; 
-    border: 1px solid #FBF2B1; 
-    box-sizing: border-box; 
+.logo {
+    width: 2000px;
+    height: 230px;
+    margin-left: -10px;
+    overflow: hidden; 
+    position: relative;
+    background-color: white;
 }
 
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-.project-title {
-    font-size: 18px;
+.image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.projects-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.school-info {
+    flex: 1;
+}
+
+.project-name {
+    font-size: 22px;
     font-weight: 800;
-    margin-bottom: -15px;
+    margin-bottom: -9px;
+    text-align: left;
+    margin-top: -1px;
 }
 
-.project-date {
-    font-size: 11px;
-    font-weight: 500;
-    color: #FBF2B1;
-    margin-bottom: -10px;
-}
-
-.project-description {
-    font-size: 14px;
-    font-weight: 400;
+.details {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.6;
+    text-align: left;
     margin-bottom: 10px;
+    width: 460px;
 }
 
-.disclaimer {
-    font-size: 14px;
-    font-weight: 400;
+.projectbutton {
+    background-color: white;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-family: 'Sora', sans-serif; 
+    font-weight: 900; 
+    font-size: 16px;
+    color: black;
+    text-align: left;
+    vertical-align: middle;
+    line-height: 40px;
+    padding-left: 15px;
+    opacity: 40%;
+    width: 170px;
+    height: 40px;
+    margin-bottom: 17px;
+}
+
+.projectbutton:hover {
+    transform: scale(1.1); 
+    transition: transform 0.2s;
 }
 
 .project-icons {
@@ -145,7 +183,7 @@ body {
 .iconfigma {
     width: 17px;
     height: 24px;
-    cursor: pointer; 
+    cursor: pointer;
 }
 
 .icon {
@@ -160,3 +198,7 @@ body {
     transition: transform 0.2s;
 }
 
+.iconfigma:hover {
+    transform: scale(1.1); 
+    transition: transform 0.2s;
+}
