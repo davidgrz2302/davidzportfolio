@@ -2,7 +2,7 @@
 body {
     margin: 0;
     background-color: black;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Sora', sans-serif;
     color: white;
 }
 
@@ -50,7 +50,7 @@ body {
 }
 
 .section-title {
-    font-size: 48px;
+    font-size: 36px;
     font-weight: 800;
     text-align: left; 
     color:white;
@@ -66,15 +66,15 @@ body {
     border: 2px solid transparent;
     border-radius: 15px;
     padding: 20px;
-    background: linear-gradient(black, black) padding-box,
-                linear-gradient(90deg, #FFC371, #FF5F6D) border-box;
+    background: linear-gradient(#27272A, #27272A) padding-box, 
+    linear-gradient(90deg, #F4426C, #FBF2B1) border-box;
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
-    width: 553px;
+    width: 544px;
 }
 
 label {
@@ -95,7 +95,7 @@ input, textarea {
 }
 
 input::placeholder, textarea::placeholder {
-    color: #FFC371;
+    color: white;
     font-size: 14px;
 }
 
