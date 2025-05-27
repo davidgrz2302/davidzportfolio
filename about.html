@@ -1,66 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="about.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="about.css" />
 </head>
 <body>
-    <div class="background">
-        <!-- Navigation Bar -->
-        <nav class="navbar">
-            <div class="left-nav">
-                <a href="index.html" class="nav-item">HOME</a>
-            </div>
-            <div class="right-nav">
-                <a href="about.html" class="nav-item">ABOUT</a>
-                <a href="education.html" class="nav-item">EDUCATION</a>
-                <a href="projects.html" class="nav-item">PROJECTS</a>
-                <a href="contacts.html" class="nav-item">CONTACT</a>
-            </div>
-        </nav>
+  <div class="background">
 
-        <!-- About Me Section -->
-        <section class="about-section">
-            <div class="about-container">
-                <div class="about-header">
-                    <h1 class="about-title">
-                        <span class="about-bold">ABOUT</span> <span class="about-light">ME</span>
-                    </h1>                    
-                    <div class="about-line"></div>
-                </div>
-                <div class="about-content">
-                    <p>
-                        Hi, my name is David Zuniga. I’m a senior at the University of Southern California pursuing my Bachelor's Degree in Computer Science. I spent two years at 
-                        Community College and then transferred to USC in 2021. During my time in college I have taken classes involving C++ programming, but my main interests lie with UX/UI design and full stack web development.<br><br>
-                        Outside school, I particpiate in the USC Trojan Marching Band and have playing the trombone for nine years. I also have a great passion for sports such as basketball
-                        and baseball. My interest in design was actually encouraged by sports as I have had experience posting various designs on social media.
-                    </p>
-                    <div class="skills-section">
-                        <h2 class="skills-title">
-                            <span class="skills-light">MY</span> <span class="skills-bold">SKILLS</span>
-                        </h2>                        
-                        <div class="skills-grid">
-                            <div class="skill">HTML</div>
-                            <div class="skill">CSS</div>
-                            <div class="skill">JAVASCRIPT</div>
-                            <div class="skillalt">FIGMA</div>
-                            <div class="skill">DART</div>
-                            <div class="skill">FLUTTER</div>
-                            <div class="skill">SWIFT</div>
-                            <div class="skillalt">UX/UI DESIGN</div>
-                            <div class="skill">WEB DEVELOPMENT</div>
-                        </div>
-                    </div>
-                </div>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="left-nav">
+        <a href="index.html" class="nav-item">HOME</a>
+      </div>
+      
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+      <div class="right-nav" id="mobileMenu">
+        <a href="about.html" class="nav-item">ABOUT</a>
+        <a href="education.html" class="nav-item">EDUCATION</a>
+        <a href="projects.html" class="nav-item">PROJECTS</a>
+        <a href="contacts.html" class="nav-item">CONTACT</a>
+      </div>
+    </nav>
+
+    <!-- About Section -->
+    <section class="about-section">
+      <div class="about-container">
+
+        <!-- Left Side -->
+        <div class="about-header">
+          <h2 class="about-title">ABOUT <span class="about-bold">ME</span></h2>
+        </div>
+        
+        <!-- Right Side: Content -->
+        <div class="about-content">
+          <p>
+            Hi, I’m David Gerardo Zuniga — a senior at the University of Southern California studying Computer Science, with a growing passion for UX/UI design. Ever since I was young, I’ve loved finding ways to express my creativity — whether through drawing, layout design, or reimagining the look and feel of everyday things. That creative instinct naturally evolved into a deeper interest in how thoughtful design shapes digital experiences.
+          </p>
+          <p class="spaced-line">
+            After transferring from Los Angeles Pierce College, I discovered the world of user-centered design and became captivated by how interfaces can influence emotion, behavior, and trust. I also developed a strong passion for web development — specifically, crafting responsive, accessible websites that are both visually appealing and intuitive to use. I find joy in designing interfaces that aren’t just functional, but also aesthetically pleasing and emotionally resonant.
+          </p>
+          <p class="spaced-line">
+            What excites me most is the challenge of turning complex ideas into clean, intuitive experiences that make people feel empowered and understood. I care deeply about designing with empathy and purpose. Whether I’m wireframing in Figma, coding interactive features, conducting usability tests, or refining interaction flows, my goal is always to create work that’s not only functional — but human-centered, accessible, and intentional.
+          </p>
+
+          <!-- Skills -->
+          <div class="skills-section">
+            <h2 class="skills-title">
+              <span class="skills-light">MY</span> <span class="skills-bold">SKILLS</span>
+            </h2>
+            <div class="skills-grid">
+              <div class="skill">HTML</div>
+              <div class="skill">CSS</div>
+              <div class="skill">JAVASCRIPT</div>
+              <div class="skillalt">FIGMA</div>
+              <div class="skill">DART</div>
+              <div class="skill">FLUTTER</div>
+              <div class="skill">SWIFT</div>
+              <div class="skillalt">UX/UI DESIGN</div>
+              <div class="skill">WEB DEVELOPMENT</div>
             </div>
-        </section>
-    </div>
+          </div>
+
+          <!-- Outside Academics -->
+          <h2 class="academics-title">
+            <span class="academics">OUTSIDE</span> <span class="skills-bold">ACADEMICS</span>
+          </h2>
+          <section class="interests-section">
+            <div class="interest-card">
+              <h3>Sports</h3>
+              <p>
+                I love watching and analyzing sports in my free time — it’s how I relax and stay sharp. The Dodgers have always been a special part of my life, and I also follow the Cavaliers. It’s an unusual combo, but both teams mean a lot to me.
+              </p>
+              <div class="interest-images">
+                <img src="./pngs/dodgers.png" alt="Dodgers" />
+                <img src="./pngs/cavs.png" alt="Cavaliers" />
+              </div>
+            </div>
+
+            <div class="interest-card">
+              <h3>TV Shows</h3>
+              <p>
+                I’m drawn to TV shows that blend sci-fi with emotional storytelling — dark, thought-provoking worlds with strong characters and high stakes.
+              </p>
+              <div class="interest-images">
+                <img src="./pngs/st.png" alt="Stranger Things" />
+                <img src="./pngs/lastofus.png" alt="The Last of Us" />
+              </div>
+            </div>
+
+            <div class="interest-card">
+              <h3>Social Media</h3>
+              <p>
+                I’ve been running a social media page for about 8 years, using it as a creative outlet to design posts that highlight my favorite team. It’s where I combine my love for sports, storytelling, and visual design.
+              </p>
+              <div class="interest-images">
+                <img src="./pngs/socialmedia1.png" alt="Social 1" />
+                <img src="./pngs/socialmedia2.png" alt="Social 2" />
+              </div>
+            </div>
+
+            <div class="interest-card">
+              <h3>Music</h3>
+              <p>
+                I’m a member of the USC Marching Band, where I play trombone and support USC's teams at games. It’s given me the chance to perform in incredible stadiums and travel to different states, all while being part of something bigger than myself.
+              </p>
+              <div class="interest-images">
+                <img src="./pngs/music.png" alt="Band" />
+              </div>
+            </div>
+          </section>
+
+          <!-- Design Gallery -->
+          <h2 class="gallery-title">
+            <span class="gallery-light">DESIGN</span> <span class="skills-bold">GALLERY</span>
+          </h2>
+          <section class="gallery-grid">
+            <img src="./pngs/socialmedia1.png" alt="Design 1" />
+            <img src="./pngs/socialmedia2.png" alt="Design 2" />
+            <img src="./pngs/socialmedia3.png" alt="Design 3" />
+            <img src="./pngs/socialmedia4.png" alt="Design 4" />
+            <img src="./pngs/socialmedia5.png" alt="Design 5" />
+            <img src="./pngs/socialmedia6.png" alt="Design 6" />
+            <img src="./pngs/socialmedia7.png" alt="Design 7" />
+            <img src="./pngs/socialmedia8.png" alt="Design 8" />
+            <img src="./pngs/socialmedia9.png" alt="Design 9" />
+          </section>
+
+          <section class="mini-slideshow-section">
+            <h2 class="mini-slideshow-title">Small Sports Analytics Project</h2>
+            <div class="slideshow-container small-slideshow">
+                <div class="slide fade"><img src="./analytics/analytics1.jpg" alt="Slide 1"></div>
+                <div class="slide fade"><img src="./analytics/analytics2.jpg" alt="Slide 2"></div>
+                <div class="slide fade"><img src="./analytics/analytics3.jpg" alt="Slide 3"></div>
+                <div class="slide fade"><img src="./analytics/analytics4.jpg" alt="Slide 4"></div>
+                <div class="slide fade"><img src="./analytics/analytics5.jpg" alt="Slide 5"></div>
+                <div class="slide fade"><img src="./analytics/analytics6.jpg" alt="Slide 6"></div>
+                <div class="slide fade"><img src="./analytics/analytics7.jpg" alt="Slide 7"></div>
+                <div class="slide fade"><img src="./analytics/analytics8.jpg" alt="Slide 8"></div>
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+            </div>
+            <p class="mini-slideshow-description">
+                I analyzed the core four players from the Cleveland Cavaliers by exploring every possible player combination — such as Garland & Mobley, Mitchell & Mobley, or Garland, Mitchell & Mobley. For each lineup, I studied individual player stats, team win-loss records, and point differentials to understand their on-court impact.
+            </p>
+
+            <!-- Links -->
+            <div class="mini-slideshow-links">
+                <a href="https://docs.google.com/spreadsheets/d/1xzEcsto3YAgQ68d4mRkOpZZzeTkWWf7S-VdQ7NR_Ia0/edit?usp=sharing" target="_blank">Excel Sheet 2022-2023</a>
+                <a href="https://docs.google.com/spreadsheets/d/1XOhZFctwNNzX_LcdaM6CISmwCJCbNRZk15W9OCxBW6k/edit?usp=sharing" target="_blank">Excel Sheet 2023-2024</a>
+            </div>
+          </section>
+
+
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function plusSlides(n) {
+    slideIndex += n;
+    showSlides();
+    }
+
+    function showSlides() {
+    let slides = document.querySelectorAll(".slide");
+    if (slideIndex >= slides.length) slideIndex = 0;
+    if (slideIndex < 0) slideIndex = slides.length - 1;
+
+    slides.forEach(slide => slide.style.display = "none");
+    slides[slideIndex].style.display = "block";
+    }
+
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('show');
+    }
+ 
+  </script>
+
 </body>
 </html>
+
+
 
 
 

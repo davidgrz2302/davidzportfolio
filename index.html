@@ -1,63 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Introduction</title>
-    <!-- Link to Google Fonts for Poppins -->
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="home.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Introduction</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="home.css" />
 </head>
 <body>
-    <div class="background">
-        <!-- Navigation Bar -->
-        <nav class="navbar">
-            <div class="left-nav">
-                <a href="index.html" class="nav-item">HOME</a>
-            </div>
-            <div class="right-nav">
-                <a href="about.html" class="nav-item">ABOUT</a>
-                <a href="education.html" class="nav-item">EDUCATION</a>
-                <a href="projects.html#" class="nav-item">PROJECTS</a>
-                <a href="contacts.html" class="nav-item">CONTACT</a>
-            </div>
-        </nav>
+  <div class="background">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="left-nav">
+        <a href="index.html" class="nav-item">HOME</a>
+      </div>
+      
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
 
-        <!-- Introduction Section -->
-        <div class="intro">
-            <p class="hello">Hello,</p>
-            <p class="iam">
-                I AM <span class="highlight">DAVID ZUNIGA</span>, I'M A SENIOR AT
-            </p>
-            <p class="university-line">
-                THE <span class="highlight2">UNIVERSITY OF SOUTHERN CALIFORNIA</span>
-            </p>
-            <p class="studying">STUDYING COMPUTER SCIENCE</p>
-        </div>
+      <div class="right-nav" id="mobileMenu">
+        <a href="about.html" class="nav-item">ABOUT</a>
+        <a href="education.html" class="nav-item">EDUCATION</a>
+        <a href="projects.html" class="nav-item">PROJECTS</a>
+        <a href="contacts.html" class="nav-item">CONTACT</a>
+      </div>
+    </nav>
 
-        <!-- Buttons Section -->
-        <div class="buttons-container">
-            <a href="https://www.linkedin.com/in/david-zuniga-7a97b52b8/" target="_blank" class="button">
-                <span>
-                    <img src="./pngs/linkedin.png" alt="LinkedIn Icon" class="icon1"> LINKEDIN
-                </span>
-            </a>
-            <a href="https://drive.google.com/file/d/1rZY6lW_xWDnEkXW5nFKOoJ_w-zNlN7Qd/view?usp=sharing" class="button">
-                <span>
-                    <img src="./pngs/download.png" alt="Download Icon" class="icon"> RESUME
-                </span>
-            </a>
-            <a href="https://github.com/davidgrz2302" class="button">
-                <span>
-                    <img src="./pngs/github.png" alt="GitHub Icon" class="icon"> GITHUB
-                </span>
-            </a>
-        </div>  
+    <!-- Introduction Section -->
+    <div class="intro">
+      <p class="hello">Hello,</p>
+      <p class="iam">
+        I AM <span class="highlight">DAVID ZUNIGA</span>, I'M A SENIOR AT
+      </p>
+      <p class="university-line">
+        THE <span class="highlight2">UNIVERSITY OF SOUTHERN CALIFORNIA</span>
+      </p>
+      <p class="studying">STUDYING COMPUTER SCIENCE</p>
     </div>
+
+    <!-- Buttons Section -->
+    <div class="buttons-container">
+      <a href="https://www.linkedin.com/in/david-zuniga-7a97b52b8/" target="_blank" class="button">
+        <span><img src="./pngs/linkedin.png" alt="LinkedIn Icon" class="icon1"> LINKEDIN</span>
+      </a>
+      <a href="https://drive.google.com/file/d/1rZY6lW_xWDnEkXW5nFKOoJ_w-zNlN7Qd/view?usp=sharing" class="button" target="_blank">
+        <span><img src="./pngs/download.png" alt="Download Icon" class="icon"> RESUME</span>
+      </a>
+      <a href="https://github.com/davidgrz2302" class="button" target="_blank">
+        <span><img src="./pngs/github.png" alt="GitHub Icon" class="icon"> GITHUB</span>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('show');
+    }
+  </script>
 </body>
 </html>
+
 
 
 

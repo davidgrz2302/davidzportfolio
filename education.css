@@ -40,6 +40,14 @@ body {
     color: gray;
 }
 
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
 /* Education Section */
 .education-section {
     text-align: center;
@@ -69,8 +77,8 @@ body {
 .education-card {
     display: flex;
     align-items: flex-start;
-    background: linear-gradient(#27272A, #27272A) padding-box, 
-                linear-gradient(90deg, #9D2235 0%, #FFC72C 100%) border-box;
+    background: linear-gradient(#000000, #000000) padding-box, 
+    linear-gradient(0deg, #F4426C, #FBF2B1) border-box;
     border-radius: 15px;
     border: 3px solid transparent;
     padding: 20px 30px;
@@ -147,4 +155,84 @@ body {
     white-space: nowrap;
     align-self: flex-start; 
 }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px;
+    flex-wrap: nowrap;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .right-nav {
+    position: absolute;
+    top: 100px;
+    right: 30px;
+    background-color: black;
+    border: 1px solid #444;
+    padding: 10px 15px;
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+  }
+
+  .right-nav.show {
+    display: flex;
+  }
+
+  .section-title, .about-bold, .about-light {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .education-card {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 20px;
+  }
+
+  .logo,.usclogo {
+    margin-bottom: 15px;
+  }
+
+  .education-details {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .college-name, .degree, .details, .education-date {
+    text-align: center;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .details {
+    font-size: 14px;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .education-date {
+    font-size: 13px;
+    margin-top: 10px;
+  }
+
+  .logo img {
+    max-width: 60px;
+    max-height: 60px;
+    object-fit: contain;
+    display: block;
+  }
+
+}
+
 
