@@ -1,0 +1,364 @@
+@font-face {
+  font-family: 'PP Editorial New';
+  src: url('fonts/PPEditorialNew-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PP Editorial New';
+  src: url('fonts/PPEditorialNew-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'PP Neue Montreal';
+  src: url('fonts/PPNeueMontreal-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PP Neue Montreal';
+  src: url('fonts/PPNeueMontreal-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  background: #1C1C1C;
+  color: #7C7C7C;
+  font-family: 'PP Neue Montreal', Arial, sans-serif;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #1C1C1C;
+}
+
+
+/* SIDEBAR STYLES */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 230px;
+  background: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.sidebar-home {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.sidebar-home:hover {
+  color: #fbf2b1;
+}
+.sidebar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom, 
+    #C471F5 0%, #FAE16C 60%, #F9F9F6 100%
+  );
+}
+.sidebar-content { margin-left: 29px; margin-top: 34px; }
+.sidebar-home {
+  font-family: 'PP Editorial New', serif;
+  font-weight: 400;
+  font-size: 2.8rem;
+  letter-spacing: -1px;
+  margin-bottom: 34px;
+  color: #fff;
+  line-height: 1.0;
+  margin-top: 13px;
+}
+.sidebar-section { margin-bottom: 36px; }
+.sidebar-label {
+  font-family: 'PP Neue Montreal', Arial, sans-serif;
+  font-weight: 500;
+  font-size: 0.60rem;
+  color: #7C7C7C;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  margin-bottom: 11px;
+  margin-top: -5px;
+  line-height: 1.0;
+}
+.sidebar-link {
+  display: block;
+  font-family: 'PP Neue Montreal', Arial, sans-serif;
+  font-weight: 700;
+  color: #7C7C7C;
+  text-decoration: none;
+  font-size: 0.87rem;
+  margin-bottom: 3px;
+  margin-top: 0;
+  line-height: 38px;
+  transition: color 0.18s;
+  padding-left: 0;
+}
+
+.sidebar-link.gradient-hover:hover {
+  background: linear-gradient(90deg, #C471F5 0%, #FAE16C 60%, #F9F9F6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: background 0.3s, color 0.3s;
+  color: transparent;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 700px) {
+  .sidebar { width: 100vw; height: auto; position: relative; border-right: none; border-bottom: 1px solid #444; }
+  .sidebar-content { margin-left: 16px; margin-top: 16px; }
+  .sidebar-home { font-size: 2rem; margin-bottom: 24px; }
+  .sidebar-label { font-size: 0.78rem; }
+  .sidebar-link { font-size: 0.93rem; line-height: 33px; }
+}
+
+/* MAIN CONTENT */
+.main-content {
+  margin-left: 230px;
+  padding: 52px 54px 0 54px;
+  min-height: 100vh;
+  background: #161616;
+}
+.headline h1 {
+  font-size: 4.5rem;
+  font-weight: 400;
+  color: #fff;
+  margin: 40px 0 22px 45px;
+  line-height: 1.04;
+  letter-spacing: -1.5px;
+}
+.ppe-regular { font-family: 'PP Editorial New', serif; font-weight: 400; font-style: normal; }
+.ppe-italic { font-family: 'PP Editorial New', serif; font-style: italic; font-weight: 400; }
+.subtitle {
+  color: #858585;
+  font-family: 'PP Neue Montreal', Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-left: 45px;
+  margin-top: 18px;
+  margin-bottom: 42px;
+  max-width: 800px;
+}
+.selected-work-label {
+  color: #858585;
+  font-family: 'PP Neue Montreal', Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 28px;
+  margin-top: 32px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  margin-bottom: 40px;
+}
+
+.card {
+  width: 100%;
+  min-width: 0;
+  height: 360px;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #232323;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.22);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-img {
+  position: absolute;
+  left: 0;
+  top: 27.5px;
+  width: 100%;
+  max-height: 245px;
+  object-fit: contain;
+  z-index: 2;
+}
+
+.card-gradient {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 60px;
+  background: linear-gradient(to bottom, #cdb97d 0%, #984349 100%);
+  z-index: 1;
+}
+
+.card-footer {
+  position: relative;
+  z-index: 2;
+  background: #1C1C1C;
+  padding: 13px 13px 15px 18px;
+}
+
+.card-title {
+  color: #fff;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+}
+
+.card-subtitle {
+  color: #bbbbbb;
+  font-size: 0.7rem;
+  font-family: Arial, sans-serif;
+}
+
+.card-gradient-blue {
+    background: linear-gradient(to bottom, #1ABCFE 20%, #A259FF 80%);
+}
+
+.card-gradient-green {
+    background: linear-gradient(to bottom, #3D7EAA 0%, #FFE47A 100%);
+}
+
+.card-third {
+  margin-bottom: 40px;
+}
+
+.card-third .card-img {
+  width: 88%;           
+  left: 50%;
+  top: 24px;           
+  transform: translateX(-50%);
+  object-fit: cover;
+  aspect-ratio: 3/2;
+  max-height: 254px;      
+}
+
+@media (max-width: 1100px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+  .card-grid .card:nth-child(3) {
+    grid-column: 1;
+  }
+}
+
+/* hovering card */
+.holo-hover::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  transform: rotate(-45deg);
+  transition: all 0.5s ease;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.holo-hover:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
+.holo-hover:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.holo-portfolio::before {
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent 30%,
+    rgba(205, 185, 125, 0.2),
+    rgba(152, 67, 73, 0.3)
+  );
+}
+.holo-portfolio:hover {
+  box-shadow: 0 0 20px rgba(205, 185, 125, 0.4);
+}
+
+.holo-geoguessr::before {
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent 30%,
+    rgba(26, 188, 254, 0.2),
+    rgba(162, 89, 255, 0.3)
+  );
+}
+.holo-geoguessr:hover {
+  box-shadow: 0 0 20px rgba(26, 188, 254, 0.4);
+}
+
+.holo-xstudy::before {
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent 30%,
+    rgba(61, 126, 170, 0.2),
+    rgba(255, 228, 122, 0.3)
+  );
+}
+.holo-xstudy:hover {
+  box-shadow: 0 0 20px rgba(61, 126, 170, 0.4);
+}
+
+.card-wrapper {
+  display: block;
+}
+
+/* sliding animations */
+.fade-slide-up {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.fade-slide-left {
+  opacity: 0;
+  transform: translateX(-40px);
+}
+
+.animate-on-load {
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-600 { animation-delay: 0.6s; }
+
+@keyframes slideUpFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideLeftFade {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+

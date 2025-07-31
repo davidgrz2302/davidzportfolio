@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>USC GeoGuessr</title>
+  <link rel="stylesheet" href="geoguessr.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="particle-background" id="particles"></div>
+
+  <div class="sidebar">
+    <div class="sidebar-content">
+      <a class="sidebar-home" href="portfoliohome.html">Home</a>
+      <div class="sidebar-section">
+        <div class="sidebar-label">Projects</div>
+        <a class="sidebar-link gradient-hover" href="portfolio.html">Portfolio</a>
+        <a class="sidebar-link gradient-hover" href="xstudy.html">Enhancing X Usability</a>
+        <a class="sidebar-link gradient-hover" href="geoguessr.html">USC GeoGuessr</a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-label">Other</div>
+        <a class="sidebar-link gradient-hover" href="aboutme.html">About Me</a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-label">Socials</div>
+        <a class="sidebar-link gradient-hover" href="https://www.linkedin.com/in/david-zuniga-7a97b52b8/">LinkedIn</a>
+        <a class="sidebar-link gradient-hover" href="https://github.com/davidgrz2302">Github</a>
+        <a class="sidebar-link gradient-hover" href="#">Resume</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div class="background">
+      <div class="card-wrapper fade-slide-up animate-on-load delay-100" style="animation-name: slideUpFade;">
+        <div class="card card-third">
+          <div class="card-gradient card-gradient-blue"></div>
+          <div class="card-img-row">
+            <div class="card-img-wrapper">
+              <img src="./pngs/geoguessrlobby.png" alt="Cover 1" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-caption fade-slide-left animate-on-load delay-200" style="animation-name: slideLeftFade;">
+        <h2>USC GeoGuessr</h2>
+        <h1>A USC-themed recreation of GeoGuessr that challenges players to guess campus locations.</h1>
+        <div class="caption-underline"></div>
+      </div>
+    </div>
+
+    <div class="project-container">
+      <div class="project-left fade-slide-up animate-on-load delay-300" style="animation-name: slideUpFade;">
+        <h2>Overview</h2>
+        <p>
+          USC GeoGuessr is a location-based web game inspired by the popular GeoGuessr concept but tailored 
+          to the University of Southern California campus. Players are shown random images of locations 
+          around USC and must guess the exact spot on a map. The game supports both solo and multiplayer 
+          modes with real-time updates, accurate scoring based on proximity and response time, and user 
+          authentication. The app emphasizes engaging gameplay, smooth UI/UX, and robust backend integration.
+        </p>
+        <h2>Achievements</h2>
+        <ul>
+          <li>Developed full-stack multiplayer game using React (frontend), Spring Boot (backend), and MySQL (AWS Aurora RDS).</li>
+          <li>Implemented WebSocket communication for real-time multiplayer gameplay and state synchronization.</li>
+          <li>Built responsive map interface with Google Maps API integration, custom image-based location guessing, and dynamic scoring.</li>
+          <li>Enabled CI/CD with GitHub Actions for automatic deployment to GitHub Pages on push.</li>
+          <li>Conducted extensive black-box, unit, and stress testing for authentication, gameplay flow, reconnection, and leaderboard functionality.</li>
+          <li>Designed scalable backend architecture, including Spring Security, session management, and AWS S3 photo storage.</li>
+        </ul>
+      </div>
+
+      <div class="gradient-border fade-slide-up animate-on-load delay-400" style="animation-name: slideUpFade;">
+        <div class="project-right">
+          <h1 class="project-heading">Project Details</h1>
+          <hr class="divider">
+
+          <h3 class="subheading">Technologies</h3>
+          <div class="tech-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Github</span>
+            <span>Spring Boot</span>
+            <span>IntelliJ</span>
+            <span>MySQL</span>
+            <span>Google Maps API</span>
+            <span>Browser document API</span>
+            <span>Windows API</span>
+          </div>
+
+          <hr class="divider">
+
+          <h3 class="subheading">Links</h3>
+          <a href="https://github.com/your-repo" class="link-item" target="_blank">
+            <i class="fab fa-github"></i> GitHub Repository
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const container = document.getElementById('particles');
+
+    for (let i = 0; i < 100; i++) {
+      const wrapper = document.createElement('div');
+      wrapper.classList.add('circle-container');
+
+      const circle = document.createElement('div');
+      circle.classList.add('circle');
+
+      const size = Math.floor(Math.random() * 6) + 2;
+      const left = Math.random() * 100;
+      const delay = Math.random() * 20;
+      const duration = 20 + Math.random() * 15;
+
+      wrapper.style.width = `${size}px`;
+      wrapper.style.height = `${size}px`;
+      wrapper.style.left = `${left}vw`;
+      wrapper.style.animationDuration = `${duration}s`;
+      wrapper.style.animationDelay = `${delay}s`;
+
+      circle.style.animationDelay = `${Math.random() * 4}s`;
+
+      wrapper.appendChild(circle);
+      container.appendChild(wrapper);
+    }
+  </script>
+</body>
+</html>
