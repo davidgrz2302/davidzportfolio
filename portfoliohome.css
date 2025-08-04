@@ -234,6 +234,10 @@ html, body {
     background: linear-gradient(to bottom, #3D7EAA 0%, #FFE47A 100%);
 }
 
+.card-gradient-black {
+     background: linear-gradient(to bottom, #e72726 0%, #000000 100%);
+}
+
 .card-third {
   margin-bottom: 40px;
 }
@@ -319,6 +323,19 @@ html, body {
 }
 .holo-xstudy:hover {
   box-shadow: 0 0 20px rgba(61, 126, 170, 0.4);
+}
+
+.holo-cineexplore::before {
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent 30%,
+    #e72726,
+    rgba(0, 0, 0, 0.3)
+  );
+}
+.holo-cineexplore:hover {
+  box-shadow: 0 0 20px #e72726;
 }
 
 .card-wrapper {

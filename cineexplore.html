@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CineExplore</title>
+  <link rel="stylesheet" href="cineexplore.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="particle-background" id="particles"></div>
+
+  <div class="sidebar">
+    <div class="sidebar-content">
+      <a class="sidebar-home" href="index.html">Home</a>
+      <div class="sidebar-section">
+        <div class="sidebar-label">Projects</div>
+        <a class="sidebar-link gradient-hover" href="portfolio.html">Portfolio</a>
+        <a class="sidebar-link gradient-hover" href="xstudy.html">Enhancing X Usability</a>
+        <a class="sidebar-link gradient-hover" href="geoguessr.html">USC GeoGuessr</a>
+        <a class="sidebar-link gradient-hover" href="cineexplore.html">CineExplore</a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-label">Other</div>
+        <a class="sidebar-link gradient-hover" href="aboutme.html">About Me</a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-label">Socials</div>
+        <a class="sidebar-link gradient-hover" href="https://www.linkedin.com/in/david-zuniga-7a97b52b8/">LinkedIn</a>
+        <a class="sidebar-link gradient-hover" href="https://github.com/davidgrz2302">Github</a>
+        <a class="sidebar-link gradient-hover" href="https://drive.google.com/file/d/1yFuyLTnamL9CTn1kTrC3EPyDgxG-odqw/view?usp=sharing">Resume</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div class="background">
+      <div class="card-wrapper fade-slide-up animate-on-load delay-100" style="animation-name: slideUpFade;">
+        <div class="card card-third">
+          <div class="card-gradient"></div>
+          <div class="card-img-row">
+            <div class="card-img-wrapper">
+              <img src="./pngs/batman.png" alt="Cover 1" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-caption fade-slide-left animate-on-load delay-200" style="animation-name: slideLeftFade;">
+        <h2>CineExplore</h2>
+        <h1>An iOS app that helps users discover popular movies and TV shows, view detailed info, and save favorites</h1>
+        <div class="caption-underline"></div>
+      </div>
+    </div>
+
+    <div class="project-container">
+      <div class="project-left fade-slide-up animate-on-load delay-300" style="animation-name: slideUpFade;">
+        <h2>Overview</h2>
+        <p>
+          CineExplore is a movie and TV show discovery app designed 
+          for iOS, built using Swift. Unlike streaming platforms, 
+          CineExplore doesn't provide playback—instead, it empowers 
+          users to explore thousands of titles and make informed 
+          decisions on what to watch. Users can search for movies 
+          and TV shows, browse detailed information, and save favorites 
+          for later—all within a clean, intuitive interface. Built for 
+          fans of film and TV, CineExplore focuses on exploration, 
+          personalization, and ease of use, making it perfect for 
+          both enthusiasts and casual viewers.
+        </p>
+        <h2>Achievements</h2>
+        <ul>
+          <li>Built native iOS application using Swift and UIKit, focused on fast performance and responsive design.</li>
+          <li>Integrated TMDB API to access thousands of movies and shows, with detailed metadata including overviews, ratings, cast, and genre.</li>
+          <li>Implemented Firebase Authentication with Google Sign-In to manage secure logins and persistent user profiles.</li>
+          <li>Created a Favorites system, allowing users to save and revisit their top picks from the movies and TV shows list.</li>
+          <li>Developed search functionality in both the Movies and TV Shows sections with real-time filtering and optimized API calls.</li>
+          <li>Designed a user-friendly Profile Page showing saved favorites and session data, with potential for future watch history tracking.</li>
+          <li>Applied clean UI/UX principles for accessibility across various user experience levels, from tech-savvy users to beginners.</li>
+        </ul>
+      </div>
+
+      <div class="gradient-border fade-slide-up animate-on-load delay-400" style="animation-name: slideUpFade;">
+        <div class="project-right">
+          <h1 class="project-heading">Project Details</h1>
+          <hr class="divider">
+
+          <h3 class="subheading">Technologies</h3>
+          <div class="tech-tags">
+            <span>Swift</span>
+            <span>UIKit</span>
+            <span>Firebase Authentication</span>
+            <span>TMBD API</span>
+            <span>XCode</span>
+            <span>MapKit</span>
+          </div>
+
+          <hr class="divider">
+
+          <h3 class="subheading">Links</h3>
+          <a href="https://github.com/davidgrz2302/CineExplore" class="link-item" target="_blank">
+            <i class="fab fa-github"></i> GitHub Repository
+          </a>
+        </div>
+      </div>
+    </div>
+    <h4 class = "disclaimer">*unfortunately I have not been able to maintain this app as I do not have a mac computer anymore.</h4>
+  </div>
+
+  <script>
+    const container = document.getElementById('particles');
+    for (let i = 0; i < 100; i++) {
+      const wrapper = document.createElement('div');
+      wrapper.classList.add('circle-container');
+
+      const circle = document.createElement('div');
+      circle.classList.add('circle');
+
+      const size = Math.floor(Math.random() * 6) + 2;
+      const left = Math.random() * 100;
+      const delay = Math.random() * 20;
+      const duration = 20 + Math.random() * 15;
+
+      wrapper.style.width = `${size}px`;
+      wrapper.style.height = `${size}px`;
+      wrapper.style.left = `${left}vw`;
+      wrapper.style.animationDuration = `${duration}s`;
+      wrapper.style.animationDelay = `${delay}s`;
+
+      circle.style.animationDelay = `${Math.random() * 4}s`;
+
+      wrapper.appendChild(circle);
+      container.appendChild(wrapper);
+    }
+  </script>
+</body>
+</html>

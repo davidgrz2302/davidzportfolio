@@ -1,0 +1,435 @@
+
+@font-face {
+  font-family: 'PP Editorial New';
+  src: url('fonts/PPEditorialNew-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PP Editorial New';
+  src: url('fonts/PPEditorialNew-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'PP Neue Montreal';
+  src: url('fonts/PPNeueMontreal-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PP Neue Montreal';
+  src: url('fonts/PPNeueMontreal-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  background: #1C1C1C;
+  color: #7C7C7C;
+  font-family: 'PP Neue Montreal', Arial, sans-serif;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: transparent; 
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 230px;
+  background: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.sidebar-home {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.sidebar-home:hover {
+  color: #fbf2b1;
+}
+
+.sidebar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom, 
+    #C471F5 0%, #FAE16C 60%, #F9F9F6 100%
+  );
+}
+
+.sidebar-content { margin-left: 29px; margin-top: 34px; }
+.sidebar-home {
+  font-family: 'PP Editorial New', serif;
+  font-weight: 400;
+  font-size: 2.8rem;
+  letter-spacing: -1px;
+  margin-bottom: 34px;
+  color: #fff;
+  line-height: 1.0;
+  margin-top: 13px;
+}
+
+.sidebar-section { margin-bottom: 36px; }
+.sidebar-label {
+  font-family: 'PP Neue Montreal', Arial, sans-serif;
+  font-weight: 500;
+  font-size: 0.60rem;
+  color: #7C7C7C;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  margin-bottom: 11px;
+  margin-top: -5px;
+  line-height: 1.0;
+}
+
+.sidebar-link {
+  display: block;
+  font-family: 'PP Neue Montreal', Arial, sans-serif;
+  font-weight: 700;
+  color: #7C7C7C;
+  text-decoration: none;
+  font-size: 0.87rem;
+  margin-bottom: 3px;
+  margin-top: 0;
+  line-height: 38px;
+  transition: color 0.18s;
+  padding-left: 0;
+}
+
+.sidebar-link.gradient-hover:hover {
+  background: linear-gradient(90deg, #C471F5 0%, #FAE16C 60%, #F9F9F6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: background 0.3s, color 0.3s;
+  color: transparent;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 700px) {
+  .sidebar { width: 100vw; height: auto; position: relative; border-right: none; border-bottom: 1px solid #444; }
+  .sidebar-content { margin-left: 16px; margin-top: 16px; }
+  .sidebar-home { font-size: 2rem; margin-bottom: 24px; }
+  .sidebar-label { font-size: 0.78rem; }
+  .sidebar-link { font-size: 0.93rem; line-height: 33px; }
+}
+
+/* MAIN CONTENT */
+.main-content {
+  margin-left: 230px;
+  padding: 52px 54px 50px 54px;
+  min-height: 100vh;
+  background: transparent;   
+  position: relative;
+  z-index: 1;
+}
+
+.card {
+  margin-top: 30px;;
+  margin-left: 126px;
+  width: 843px;
+  height: 360px;              
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.22);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;    
+  position: relative;
+}
+
+.card-img-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+  z-index: 2;
+  height: 100%;            
+}
+
+.card-img-wrapper {
+  height: 100%;              
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-img-wrapper img {
+  height: 90%;              
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.card-img {
+  position: absolute;
+  left: 0;
+  top: 27.5px;
+  width: 100%;
+  max-height: 245px;
+  object-fit: contain;
+  z-index: 2;
+}
+
+.card-caption {
+  margin-top: 12px;
+  text-align: center;
+  color: white;
+  padding-bottom: 30px;
+}
+
+.card-caption h2 {
+  font-family: 'PP Editorial New', serif;
+  text-align: left;
+  margin-top: 30px;
+  margin-bottom: -7px;
+  margin-left: 118px;
+  font-size: 40px;
+  font-weight: 550;
+}
+
+.card-caption h1 {
+  font-family: 'PP Neue Montreal', sans-serif;
+  font-weight: 500;
+  text-align: left;
+  margin-left: 118px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #7d7979;
+}
+
+.caption-underline {
+  height: 0.2px;
+  background: #434343;
+  margin: 30px 118px -30px 118px;
+  border-radius: 2px;
+}
+
+.card-gradient {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0; 
+  background: linear-gradient(to bottom, #e72726 0%, #000000 100%);
+  z-index: 1;
+}
+
+.disclaimer {
+  padding-left: 118px;
+  color: red
+}
+
+.project-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 40px 100px 0 118px;
+  max-width: 843px;
+  gap: 40px;
+}
+
+.project-left {
+  flex: 1.3;
+  color: white;
+}
+
+.project-left h2 {
+  margin-top: 0;
+  font-family: 'PP Neue Montreal', sans-serif;
+  font-weight: 550;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.project-left p {
+  font-family: 'PP Neue Montreal', sans-serif;
+  color: #8d8989;
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.project-left ul {
+  font-family: 'PP Neue Montreal', sans-serif;
+  font-size: 15px;
+  padding-left: 18px;
+  line-height: 1.5;
+  color: #8d8989;
+}
+
+.gradient-border {
+  padding: 2px; 
+  border-radius: 18px;
+  background: linear-gradient(135deg, #e72726, #000000); 
+  display: inline-block;
+}
+
+.project-right {
+  background-color: #1C1C1C;
+  padding: 10px 24px 24px 24px;
+  border-radius: 18px;
+  color: #ffffff;
+  font-family: 'Inter', 'PP Neue Montreal', sans-serif;
+  max-width: 320px;
+  box-sizing: border-box;
+}
+
+.project-heading {
+  font-family: 'PP Neue Montreal', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 16px 0;
+}
+
+.subheading {
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 10px;
+  gap: 12px 16px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.tech-tags span {
+  color: #e72726;
+}
+
+.link-item {
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #e72726;
+  text-decoration: none;
+  margin-top: 10px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.link-item:hover {
+  color: #b91f1f;
+}
+
+.link-item i {
+  font-size: 16px;
+}
+
+.particle-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #161616; 
+  z-index: -2; 
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.circle-container {
+  position: absolute;
+  animation: floatUp linear infinite;
+  transform: translateY(-10vh);
+}
+
+.circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  mix-blend-mode: screen;
+  background-image: radial-gradient(
+    #000000,
+    #e72726 10%,
+    rgba(245, 225, 139, 0) 56%
+  );
+  animation: fade 2s infinite, scale 4s infinite;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(100vh);
+  }
+  100% {
+    transform: translateY(-120vh);
+  }
+}
+
+@keyframes fade {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes scale {
+  0%, 100% { transform: scale(0.4); }
+  50% { transform: scale(2.2); }
+}
+
+.fade-slide-up {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.fade-slide-left {
+  opacity: 0;
+  transform: translateX(-40px);
+}
+
+.animate-on-load {
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+.card-wrapper {
+  display: block;
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+
+@keyframes slideUpFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideLeftFade {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
