@@ -2,12 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Me</title>
   <link rel="stylesheet" href="aboutme.css">
 </head>
 <body>
 
+  <button class="menu-toggle" aria-label="Open menu">☰</button>
+  <div class="overlay"></div>
+
   <div class="sidebar">
+    <button class="menu-close" aria-label="Close menu">✕</button>
     <div class="sidebar-content">
       <a class="sidebar-home" href="index.html">Home</a>
       <div class="sidebar-section">
@@ -16,6 +21,7 @@
         <a class="sidebar-link gradient-hover" href="xstudy.html">Enhancing X Usability</a>
         <a class="sidebar-link gradient-hover" href="geoguessr.html">USC GeoGuessr</a>
         <a class="sidebar-link gradient-hover" href="cineexplore.html">CineExplore</a>
+        <a class="sidebar-link gradient-hover" href="stranker.html">Stranger Things Ranker</a>
       </div>
       <div class="sidebar-section">
         <div class="sidebar-label">Other</div>
@@ -25,7 +31,7 @@
         <div class="sidebar-label">Socials</div>
         <a class="sidebar-link gradient-hover" href="https://www.linkedin.com/in/david-zuniga-7a97b52b8/">LinkedIn</a>
         <a class="sidebar-link gradient-hover" href="https://github.com/davidgrz2302">Github</a>
-        <a class="sidebar-link gradient-hover" href="https://drive.google.com/file/d/1yFuyLTnamL9CTn1kTrC3EPyDgxG-odqw/view?usp=sharing">Resume</a>
+        <a class="sidebar-link gradient-hover" href="https://drive.google.com/file/d/1P1hNR4RNsSKtInBEq8qmdH5263om7-eC/view?usp=sharing">Resume</a>
       </div>
     </div>
   </div>
@@ -183,6 +189,24 @@
   </div>
 
   <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const sidebar = document.querySelector('.sidebar');
+    const overlay = document.querySelector('.overlay');
+    const closeBtn = document.querySelector('.menu-close');
+
+    toggle.addEventListener('click', () => {
+      sidebar.classList.add('open');
+      overlay.classList.add('show');
+    });
+
+    const closeMenu = () => {
+      sidebar.classList.remove('open');
+      overlay.classList.remove('show');
+    };
+
+    closeBtn.addEventListener('click', closeMenu);
+    overlay.addEventListener('click', closeMenu);
+
     let slideIndex = 0;
     showSlides();
 
@@ -198,11 +222,6 @@
 
       slides.forEach(slide => slide.style.display = "none");
       slides[slideIndex].style.display = "block";
-    }
-
-    function toggleMenu() {
-      const menu = document.getElementById('mobileMenu');
-      menu.classList.toggle('show');
     }
 
     const slideIns = document.querySelectorAll('.slide-in');

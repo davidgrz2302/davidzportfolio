@@ -11,7 +11,11 @@
 <body>
   <div class="particle-background" id="particles"></div>
 
+  <button class="menu-toggle" aria-label="Open menu">☰</button>
+  <div class="overlay"></div>
+
   <div class="sidebar">
+    <button class="menu-close" aria-label="Close menu">✕</button>
     <div class="sidebar-content">
       <a class="sidebar-home" href="index.html">Home</a>
       <div class="sidebar-section">
@@ -20,6 +24,7 @@
         <a class="sidebar-link gradient-hover" href="xstudy.html">Enhancing X Usability</a>
         <a class="sidebar-link gradient-hover" href="geoguessr.html">USC GeoGuessr</a>
         <a class="sidebar-link gradient-hover" href="cineexplore.html">CineExplore</a>
+        <a class="sidebar-link gradient-hover" href="stranker.html">Stranger Things Ranker</a>
       </div>
       <div class="sidebar-section">
         <div class="sidebar-label">Other</div>
@@ -29,7 +34,7 @@
         <div class="sidebar-label">Socials</div>
         <a class="sidebar-link gradient-hover" href="https://www.linkedin.com/in/david-zuniga-7a97b52b8/">LinkedIn</a>
         <a class="sidebar-link gradient-hover" href="https://github.com/davidgrz2302">Github</a>
-        <a class="sidebar-link gradient-hover" href="https://drive.google.com/file/d/1yFuyLTnamL9CTn1kTrC3EPyDgxG-odqw/view?usp=sharing">Resume</a>
+        <a class="sidebar-link gradient-hover" href="https://drive.google.com/file/d/1P1hNR4RNsSKtInBEq8qmdH5263om7-eC/view?usp=sharing">Resume</a>
       </div>
     </div>
   </div>
@@ -76,15 +81,15 @@
 
         <div class="section slide-in">
           <p class="section-tag">PROBLEM</p>
-          <h2 class="section-highlight">Persistent issue of harmful content on the social media platform X...</h2>
+          <h2 class="section-highlight">Persistent issue of harmful content on the social media platform X, which continues to negatively impact user experience and platform safety</h2>
           <div class="des">
-            <p>I've encountered a significant amount of harmful content on X...</p>
+            <p>I've encountered a significant amount of harmful content on X, including hate speech, misinformation, and violent imagery. These issues diminish user safety and highlight flaws in X's content moderation and feature design. This project explores UX changes that could reduce exposure to harmful content and improve the overall user experience.</p>
           </div>
         </div>
 
         <div class="section slide-in">
           <p class="section-tag">PROPOSED SOLUTIONS</p>
-          <h2 class="section-highlight">After spending large amounts of time researching this issue...</h2>
+          <h2 class="section-highlight">After spending large amounts of time researching this issue, the main issues this prototype aimed to target included insufficient content filtering options, lack of human moderation, an ineffective reporting system, lack of human verification, etc.</h2>
         </div>
 
         <div class="solutions">
@@ -241,23 +246,34 @@
               <strong>Some Features Needed Deeper Justification.</strong> A few ideas, like content sensitivity levels or moderator chat, were well-intentioned but lacked strong supporting data. I realized that even good ideas need clear user demand or precedent to back them up. Next time, I’d validate each proposed feature more rigorously through user feedback or competitive benchmarking before including it in the final solution.
             </li>
           </ol>
-        </div>
-
-        <div class="final slide-in">
-          <h2>Thank you for reading!</h2>
+          <div class="final slide-in">
+            <h2>Thank you for reading!</h2>
+          </div>
         </div>
       </section>
     </div>
   </div>
 
   <script>
-    function toggleMenu() {
-      const menu = document.getElementById("mobileMenu");
-      menu.classList.toggle("show");
-    }
+    const toggle = document.querySelector('.menu-toggle');
+    const sidebar = document.querySelector('.sidebar');
+    const overlay = document.querySelector('.overlay');
+    const closeBtn = document.querySelector('.menu-close');
+
+    toggle.addEventListener('click', () => {
+      sidebar.classList.add('open');
+      overlay.classList.add('show');
+    });
+
+    const closeMenu = () => {
+      sidebar.classList.remove('open');
+      overlay.classList.remove('show');
+    };
+
+    closeBtn.addEventListener('click', closeMenu);
+    overlay.addEventListener('click', closeMenu);
 
     const container = document.getElementById('particles');
-
     for (let i = 0; i < 100; i++) {
       const wrapper = document.createElement('div');
       wrapper.classList.add('circle-container');

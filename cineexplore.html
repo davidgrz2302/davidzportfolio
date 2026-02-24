@@ -11,7 +11,11 @@
 <body>
   <div class="particle-background" id="particles"></div>
 
+  <button class="menu-toggle" aria-label="Open menu">☰</button>
+  <div class="overlay"></div>
+
   <div class="sidebar">
+    <button class="menu-close" aria-label="Close menu">✕</button>
     <div class="sidebar-content">
       <a class="sidebar-home" href="index.html">Home</a>
       <div class="sidebar-section">
@@ -20,6 +24,7 @@
         <a class="sidebar-link gradient-hover" href="xstudy.html">Enhancing X Usability</a>
         <a class="sidebar-link gradient-hover" href="geoguessr.html">USC GeoGuessr</a>
         <a class="sidebar-link gradient-hover" href="cineexplore.html">CineExplore</a>
+        <a class="sidebar-link gradient-hover" href="stranker.html">Stranger Things Ranker</a>
       </div>
       <div class="sidebar-section">
         <div class="sidebar-label">Other</div>
@@ -29,7 +34,7 @@
         <div class="sidebar-label">Socials</div>
         <a class="sidebar-link gradient-hover" href="https://www.linkedin.com/in/david-zuniga-7a97b52b8/">LinkedIn</a>
         <a class="sidebar-link gradient-hover" href="https://github.com/davidgrz2302">Github</a>
-        <a class="sidebar-link gradient-hover" href="https://drive.google.com/file/d/1yFuyLTnamL9CTn1kTrC3EPyDgxG-odqw/view?usp=sharing">Resume</a>
+        <a class="sidebar-link gradient-hover" href="https://drive.google.com/file/d/1P1hNR4RNsSKtInBEq8qmdH5263om7-eC/view?usp=sharing">Resume</a>
       </div>
     </div>
   </div>
@@ -109,27 +114,40 @@
   </div>
 
   <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const sidebar = document.querySelector('.sidebar');
+    const overlay = document.querySelector('.overlay');
+    const closeBtn = document.querySelector('.menu-close');
+
+    toggle.addEventListener('click', () => {
+      sidebar.classList.add('open');
+      overlay.classList.add('show');
+    });
+
+    const closeMenu = () => {
+      sidebar.classList.remove('open');
+      overlay.classList.remove('show');
+    };
+
+    closeBtn.addEventListener('click', closeMenu);
+    overlay.addEventListener('click', closeMenu);
+
     const container = document.getElementById('particles');
     for (let i = 0; i < 100; i++) {
       const wrapper = document.createElement('div');
       wrapper.classList.add('circle-container');
-
       const circle = document.createElement('div');
       circle.classList.add('circle');
-
       const size = Math.floor(Math.random() * 6) + 2;
       const left = Math.random() * 100;
       const delay = Math.random() * 20;
       const duration = 20 + Math.random() * 15;
-
       wrapper.style.width = `${size}px`;
       wrapper.style.height = `${size}px`;
       wrapper.style.left = `${left}vw`;
       wrapper.style.animationDuration = `${duration}s`;
       wrapper.style.animationDelay = `${delay}s`;
-
       circle.style.animationDelay = `${Math.random() * 4}s`;
-
       wrapper.appendChild(circle);
       container.appendChild(wrapper);
     }

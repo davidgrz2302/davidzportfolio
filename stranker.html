@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio</title>
-  <link rel="stylesheet" href="portfolio.css" />
+  <link rel="stylesheet" href="stranker.css" />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -48,15 +48,15 @@
           <div class="card-gradient"></div>
           <div class="card-img-row">
             <div class="card-img-wrapper">
-              <img src="./pngs/updatedportfolio.png" alt="Cover 1" />
+              <img src="./pngs/stranker.png" alt="Cover 1" />
             </div>
           </div>
         </div>
       </div>
 
       <div class="card-caption fade-slide-left animate-on-load" style="animation-name: slideLeftFade;">
-        <h2>Personal Portfolio</h2>
-        <h1>A personal project used to display projects as well as passion for design and web development</h1>
+        <h2>Stranger Things Ranker</h2>
+        <h1>An interactive website that lets users rank every Stranger Things episode using a custom sorting algorithm.</h1>
         <div class="caption-underline"></div>
       </div>
     </div>
@@ -65,16 +65,19 @@
       <div class="project-left fade-slide-up animate-on-load delay-200" style="animation-name: slideUpFade;">
         <h2>Overview</h2>
         <p>
-          Developed a personal portfolio to showcase projects, technical expertise, and design sensibility.
-          The site features a responsive layout, interactive sections, and a consistent visual style
-          tailored to reflect my strengths in both frontend development and user experience.
+          Stranger Things Ranker is a web app where users rank every episode through simple head-to-head matchups. 
+          Behind the scenes, it uses an insertion sort–style algorithm: each episode is compared and then inserted 
+          into its correct position within a growing ranked list based on the user’s choices. Built with HTML, CSS, 
+          and JavaScript, the project combines dynamic DOM rendering with a cinematic, design-focused interface to 
+          create a fully personalized ranking experience.
         </p>
         <h2>Achievements</h2>
         <ul>
-          <li>Designed and developed a fully responsive personal portfolio using HTML, CSS, and JavaScript, prioritizing performance, scalability, and clean code structure.</li>
-          <li>Implemented a fixed sidebar navigation system with smooth transitions and intuitive section-based architecture to improve user flow.</li>
-          <li>Built modular, reusable CSS components to maintain consistent visual hierarchy and streamline future updates.</li>
-          <li>Structured project case studies with clear technical breakdowns, demonstrating both frontend development skills and product thinking.</li>
+          <li>Designed and implemented a comparison-based ranking system using an insertion sort–style algorithm to dynamically build a fully ordered episode list.</li>
+          <li>Developed interactive head-to-head voting logic in JavaScript, enabling real-time DOM updates without page reloads.</li>
+          <li>Engineered a scalable episode data structure (JSON-based) supporting multiple seasons and future expansions.</li>
+          <li>Built a responsive, cinematic UI inspired by the show’s aesthetic using custom typography and adaptive layouts.</li>
+          <li>Implemented local state handling to preserve rankings and generate structured results tables.</li>
         </ul>
       </div>
 
@@ -90,14 +93,21 @@
             <span>JavaScript</span>
             <span>Responsive Design</span>
           </div>
+          <h3 class="subheading">Concepts</h3>
+          <div class="tech-tags">
+            <span>Insertion Sort–based algorithm</span>
+            <span>DOM manipulation</span>
+            <span>Event handling</span>
+            <span>Local state management</span>
+          </div>
 
           <hr class="divider">
 
           <h3 class="subheading">Links</h3>
-          <a href="https://github.com/davidgrz2302/davidzportfolio" class="link-item" target="_blank">
+          <a href="https://github.com/davidgrz2302/Stranger-Things-Episode-Ranker" class="link-item" target="_blank">
             <i class="fab fa-github"></i> GitHub Repository
           </a>
-          <a href="https://davidgrz2302.github.io/davidzportfolio/index.html" class="link-item" target="_blank">
+          <a href="https://davidgrz2302.github.io/Stranger-Things-Episode-Ranker/" class="link-item" target="_blank">
             <i class="fas fa-arrow-up-right-from-square"></i> Live Demo
           </a>
         </div>
@@ -124,7 +134,6 @@
     closeBtn.addEventListener('click', closeMenu);
     overlay.addEventListener('click', closeMenu);
 
-    // --- REVERTED PARTICLE LOGIC (ORIGINAL) ---
     const container = document.getElementById('particles');
     for (let i = 0; i < 100; i++) {
       const wrapper = document.createElement('div');

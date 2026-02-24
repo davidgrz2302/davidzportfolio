@@ -1,10 +1,59 @@
 
-@font-face { font-family: 'PP Editorial New'; src: url('fonts/PPEditorialNew-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; }
-@font-face { font-family: 'PP Editorial New'; src: url('fonts/PPEditorialNew-Italic.ttf') format('truetype'); font-weight: 400; font-style: italic; }
-@font-face { font-family: 'PP Neue Montreal'; src: url('fonts/PPNeueMontreal-Medium.ttf') format('truetype'); font-weight: 500; font-style: normal; }
-@font-face { font-family: 'PP Neue Montreal'; src: url('fonts/PPNeueMontreal-Bold.ttf') format('truetype'); font-weight: 700; font-style: normal; }
+@font-face {
 
-* { box-sizing: border-box; }
+  font-family: 'PP Editorial New';
+
+  src: url('fonts/PPEditorialNew-Regular.ttf') format('truetype');
+
+  font-weight: 400;
+
+  font-style: normal;
+
+}
+
+@font-face {
+
+  font-family: 'PP Editorial New';
+
+  src: url('fonts/PPEditorialNew-Italic.ttf') format('truetype');
+
+  font-weight: 400;
+
+  font-style: italic;
+
+}
+
+@font-face {
+
+  font-family: 'PP Neue Montreal';
+
+  src: url('fonts/PPNeueMontreal-Medium.ttf') format('truetype');
+
+  font-weight: 500;
+
+  font-style: normal;
+
+}
+
+@font-face {
+
+  font-family: 'PP Neue Montreal';
+
+  src: url('fonts/PPNeueMontreal-Bold.ttf') format('truetype');
+
+  font-weight: 700;
+
+  font-style: normal;
+
+}
+
+
+
+* {
+
+  box-sizing: border-box;
+
+}
 
 body { margin: 0; background: #1C1C1C; color: #7C7C7C; font-family: 'PP Neue Montreal', Arial, sans-serif; overflow-x: hidden; }
 html, body { height: 100%; margin: 0; padding: 0; background: transparent; }
@@ -74,9 +123,10 @@ html, body { height: 100%; margin: 0; padding: 0; background: transparent; }
   display: flex;
   flex-direction: column;
   justify-content: center;   
-  align-items: center;
+  align-items: center; 
   position: relative;
 }
+
 
 .card-img-row { 
   display: flex; 
@@ -88,6 +138,8 @@ html, body { height: 100%; margin: 0; padding: 0; background: transparent; }
   position: relative; 
 }
 
+
+
 .card-img-wrapper {
   display: flex;
   justify-content: center;
@@ -95,6 +147,8 @@ html, body { height: 100%; margin: 0; padding: 0; background: transparent; }
   width: 100%;
   height: 100%;
 }
+
+
 
 .card-img-wrapper img { 
   max-height: 245px; 
@@ -104,6 +158,7 @@ html, body { height: 100%; margin: 0; padding: 0; background: transparent; }
   filter: drop-shadow(0 15px 30px rgba(0,0,0,0.4)); 
   display: block;
 }
+
 
 .card-caption h2 {
   font-family: 'PP Editorial New', serif;
@@ -125,9 +180,30 @@ html, body { height: 100%; margin: 0; padding: 0; background: transparent; }
   font-size: 18px;
   color: #7d7979;
 }
+
 .caption-underline { height: 0.5px; background: #434343; margin: 30px 118px; }
-.card-gradient { position: absolute; inset: 0; z-index: 1; }
-.card-gradient-blue { background: linear-gradient(to bottom, #1ABCFE 20%, #A259FF 80%); }
+
+.card-gradient {
+
+  position: absolute;
+
+  top: 0; left: 0; right: 0; bottom: 0;
+
+  background: linear-gradient(to bottom, #e72726 0%, #02175a 100%);
+
+  z-index: 1;
+
+}
+
+.disclaimer {
+
+  padding: 0 10%;
+
+  color: red;
+
+  font-size: 12px;
+
+}
 
 .project-container { display: flex; justify-content: space-between; align-items: flex-start; margin: 40px 100px 0 118px; max-width: 843px; gap: 40px; }
 .project-left { flex: 1.3; color: white; }
@@ -146,27 +222,79 @@ html, body { height: 100%; margin: 0; padding: 0; background: transparent; }
   color: #8d8989;
 }
 .project-left h2 { margin-top: 0; font-family: 'PP Neue Montreal', sans-serif; font-weight: 550; font-size: 22px; margin-bottom: 10px; }
+.gradient-border {
+  padding: 2px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #e72726 0%, #02175a 100%);
+  display: inline-block;
 
-.gradient-border { padding: 2px; border-radius: 18px; background: linear-gradient(135deg, #1ABCFE, #A259FF); display: inline-block; }
+}
 .project-right { background-color: #1C1C1C; padding: 10px 24px 24px 24px; border-radius: 18px; color: #ffffff; font-family: 'Inter', 'PP Neue Montreal', sans-serif; max-width: 320px; box-sizing: border-box; }
 .project-heading { font-family: 'PP Neue Montreal', sans-serif; font-weight: 500; font-size: 20px; margin-bottom: 12px; }
 .divider { border: none; border-top: 1px solid rgba(255, 255, 255, 0.1); margin: 16px 0; }
 .subheading { font-weight: 500; font-size: 14px; margin-bottom: 12px; }
 .tech-tags { display: flex; flex-wrap: wrap; margin-left: 10px; gap: 12px 16px; font-size: 13px; font-weight: 500; }
-.tech-tags span { color: #4f8cf9; }
-.link-item { font-size: 13px; display: flex; align-items: center; gap: 8px; color: #4f8cf9; text-decoration: none; margin-top: 10px; font-weight: 500; }
+.tech-tags span { color: #e72726; }
+.link-item { font-size: 13px; display: flex; align-items: center; gap: 8px; color: #e72726; text-decoration: none; margin-top: 10px; font-weight: 500; }
 
-.particle-background { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: #161616; z-index: -2; pointer-events: none; overflow: hidden; }
-.circle-container { position: absolute; animation: floatUp linear infinite; transform: translateY(-10vh); }
-.circle { width: 100%; height: 100%; border-radius: 50%; mix-blend-mode: screen; background-image: radial-gradient(#1ABCFE, #A259FF 10%, rgba(245, 225, 139, 0) 56%); animation: fade 2s infinite, scale 4s infinite; }
-@keyframes floatUp { 0% { transform: translateY(100vh); } 100% { transform: translateY(-120vh); } }
+.particle-background {
+
+  position: fixed;
+
+  inset: 0;
+
+  background: #161616;
+
+  z-index: -2;
+
+  pointer-events: none;
+
+  overflow: hidden;
+
+}
+
+
+
+.circle-container {
+
+  position: absolute;
+
+  animation: floatUp linear infinite;
+
+  transform: translateY(-10vh);
+
+}
+
+.circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  mix-blend-mode: screen;
+  background-image: radial-gradient(#e72726, #152761 10%, rgba(245, 225, 139, 0) 56%);
+  animation: fade 2s infinite, scale 4s infinite;
+}
+
+@keyframes floatUp {
+
+  0% { transform: translateY(100vh); }
+
+  100% { transform: translateY(-120vh); }
+
+}
+
 @keyframes fade { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
+
 @keyframes scale { 0%, 100% { transform: scale(0.4); } 50% { transform: scale(2.2); } }
+
+.animate-on-load {
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
 
 .fade-slide-up { opacity: 0; transform: translateY(30px); }
 .fade-slide-left { opacity: 0; transform: translateX(-40px); }
-.animate-on-load { animation-duration: 0.6s; animation-fill-mode: forwards; animation-timing-function: ease-out; }
-.delay-100 { animation-delay: 0.1s; } .delay-200 { animation-delay: 0.2s; } .delay-300 { animation-delay: 0.3s; }
+
 @keyframes slideUpFade { to { opacity: 1; transform: translateY(0); } }
 @keyframes slideLeftFade { to { opacity: 1; transform: translateX(0); } }
 
@@ -277,17 +405,20 @@ html, body { height: 100%; margin: 0; padding: 0; background: transparent; }
 
 @media (max-width: 768px) {
 
+  /* Remove sidebar offset */
   .main-content {
     margin-left: 0 !important;
     padding: 100px 20px 60px 20px;
   }
 
+  /* Center hero card */
   .card {
     margin-left: auto !important;
     margin-right: auto !important;
     width: 100% !important;
   }
 
+  /* Fix caption margins */
   .card-caption h2,
   .card-caption h1,
   .caption-underline {
@@ -299,6 +430,7 @@ html, body { height: 100%; margin: 0; padding: 0; background: transparent; }
     width: 100%;
   }
 
+  /* Stack project section */
   .project-container {
     flex-direction: column;
     margin-left: 0 !important;
@@ -313,6 +445,7 @@ html, body { height: 100%; margin: 0; padding: 0; background: transparent; }
 
 @media (min-width: 769px) and (max-width: 1400px) {
 
+  /* Remove hardcoded hero offsets */
   .card {
     margin-left: auto !important;
     margin-right: auto !important;
@@ -320,6 +453,7 @@ html, body { height: 100%; margin: 0; padding: 0; background: transparent; }
     max-width: 900px;
   }
 
+  /* Remove caption fixed margins */
   .card-caption h2,
   .card-caption h1,
   .caption-underline {
@@ -333,6 +467,7 @@ html, body { height: 100%; margin: 0; padding: 0; background: transparent; }
     margin-right: auto;
   }
 
+  /* Fix project section alignment */
   .project-container {
     margin-left: auto !important;
     margin-right: auto !important;

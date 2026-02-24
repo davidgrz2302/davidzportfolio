@@ -2,12 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home</title>
   <link rel="stylesheet" href="portfoliohome.css">
 </head>
+
 <body>
+
+  <button class="menu-toggle" aria-label="Open menu">☰</button>
+  <div class="overlay"></div>
+
   <div class="gradient"></div>
   <div class="sidebar">
+    <button class="menu-close" aria-label="Close menu">✕</button>
     <div class="sidebar-content">
       <a class="sidebar-home" href="index.html">Home</a>
       <div class="sidebar-section">
@@ -16,6 +23,7 @@
         <a class="sidebar-link gradient-hover" href="xstudy.html">Enhancing X Usability</a>
         <a class="sidebar-link gradient-hover" href="geoguessr.html">USC GeoGuessr</a>
         <a class="sidebar-link gradient-hover" href="cineexplore.html">CineExplore</a>
+        <a class="sidebar-link gradient-hover" href="stranker.html">Stranger Things Ranker</a>
       </div>
       <div class="sidebar-section">
         <div class="sidebar-label">Other</div>
@@ -25,7 +33,7 @@
         <div class="sidebar-label">Socials</div>
         <a class="sidebar-link gradient-hover" href="https://www.linkedin.com/in/david-zuniga-7a97b52b8/">LinkedIn</a>
         <a class="sidebar-link gradient-hover" href="https://github.com/davidgrz2302">Github</a>
-        <a class="sidebar-link gradient-hover" href="https://drive.google.com/file/d/1yFuyLTnamL9CTn1kTrC3EPyDgxG-odqw/view?usp=sharing">Resume</a>
+        <a class="sidebar-link gradient-hover" href="https://drive.google.com/file/d/1P1hNR4RNsSKtInBEq8qmdH5263om7-eC/view?usp=sharing">Resume</a>
       </div>
     </div>
   </div>
@@ -46,51 +54,92 @@
     </div>
 
     <div class="card-grid">
-      <div class="card-wrapper fade-slide-up animate-on-load delay-400" style="animation-name: slideUpFade;">
-        <a href="portfolio.html" class="card holo-hover holo-portfolio">
-          <div class="card-gradient"></div>
-          <img class="card-img" src="./pngs/updatedportfolio.png" alt="Personal Portfolio Preview" />
-          <div class="card-footer">
-            <div class="card-title">Personal Portfolio</div>
-            <div class="card-subtitle">Website</div>
-          </div>
-        </a>
+  <div class="card-wrapper fade-slide-up animate-on-load delay-400" style="animation-name: slideUpFade;">
+    <a href="portfolio.html" class="card holo-hover holo-portfolio">
+      <div class="card-gradient">
+        <img class="card-img" src="./pngs/updatedportfolio.png" alt="Portfolio" />
       </div>
-
-      <div class="card-wrapper fade-slide-up animate-on-load delay-500" style="animation-name: slideUpFade;">
-        <a href="geoguessr.html" class="card card-blue holo-hover holo-geoguessr">
-          <div class="card-gradient card-gradient-blue"></div>
-          <img class="card-img" src="./pngs/geoguessrlobby.png" alt="USC GeoGuessr Preview" />
-          <div class="card-footer">
-            <div class="card-title">USC GeoGuessr</div>
-            <div class="card-subtitle">Game</div>
-          </div>
-        </a>
+      <div class="card-footer">
+        <div class="card-title">Personal Portfolio</div>
+        <div class="card-subtitle">Website</div>
       </div>
-
-      <div class="card-wrapper fade-slide-up animate-on-load delay-600" style="animation-name: slideUpFade;">
-        <a href="xstudy.html" class="card card-third holo-hover holo-xstudy">
-          <div class="card-gradient card-gradient-green"></div>
-          <img class="card-img cover" src="./pngs/projectsX.png" alt="Enhancing X Usability Preview" />
-          <div class="card-footer">
-            <div class="card-title">Enhancing X Usability</div>
-            <div class="card-subtitle">Case Study</div>
-          </div>
-        </a>
-      </div>
-
-      <div class="card-wrapper fade-slide-up animate-on-load delay-600" style="animation-name: slideUpFade;">
-        <a href="cineexplore.html" class="card card-third holo-hover holo-cineexplore">
-          <div class="card-gradient card-gradient-black"></div>
-          <img class="card-img cover" src="./pngs/batman.png" alt="Enhancing X Usability Preview" />
-          <div class="card-footer">
-            <div class="card-title">CineExplore</div>
-            <div class="card-subtitle">App</div>
-          </div>
-        </a>
-      </div>
-    </div>
+    </a>
   </div>
+
+  <div class="card-wrapper fade-slide-up animate-on-load delay-500" style="animation-name: slideUpFade;">
+    <a href="geoguessr.html" class="card holo-hover holo-geoguessr">
+      <div class="card-gradient card-gradient-geoguessr">
+        <img class="card-img" src="./pngs/geoguessrlobby.png" alt="GeoGuessr" />
+      </div>
+      <div class="card-footer">
+        <div class="card-title">USC GeoGuessr</div>
+        <div class="card-subtitle">Game</div>
+      </div>
+    </a>
+  </div>
+
+  <div class="card-wrapper fade-slide-up animate-on-load delay-600" style="animation-name: slideUpFade;">
+    <a href="xstudy.html" class="card holo-hover holo-xstudy">
+      <div class="card-gradient card-gradient-xstudy">
+        <img class="card-img" src="./pngs/projectsX.png" alt="X Usability" />
+      </div>
+      <div class="card-footer">
+        <div class="card-title">Enhancing X Usability</div>
+        <div class="card-subtitle">Case Study</div>
+      </div>
+    </a>
+  </div>
+
+  <div class="card-wrapper fade-slide-up animate-on-load delay-600" style="animation-name: slideUpFade;">
+    <a href="cineexplore.html" class="card holo-hover holo-cineexplore">
+      <div class="card-gradient card-gradient-cineexplore">
+        <img class="card-img" src="./pngs/batman.png" alt="CineExplore" />
+      </div>
+      <div class="card-footer">
+        <div class="card-title">CineExplore</div>
+        <div class="card-subtitle">App</div>
+      </div>
+    </a>
+  </div>
+
+  <div class="card-wrapper fade-slide-up animate-on-load delay-600" style="animation-name: slideUpFade;">
+    <a href="stranker.html" class="card holo-hover holo-stranker">
+      <div class="card-gradient card-gradient-stranker">
+        <img class="card-img" src="./pngs/stranker.png" alt="STRanker" />
+      </div>
+      <div class="card-footer">
+        <div class="card-title">Stranger Things Ranker</div>
+        <div class="card-subtitle">Website</div>
+      </div>
+    </a>
+  </div>
+</div>
+  </div>
+
+  <script>
+  const toggle = document.querySelector('.menu-toggle');
+  const sidebar = document.querySelector('.sidebar');
+  const overlay = document.querySelector('.overlay');
+  const closeBtn = document.querySelector('.menu-close');
+
+  toggle.addEventListener('click', () => {
+    sidebar.classList.add('open');
+    overlay.classList.add('show');
+  });
+
+  const closeMenu = () => {
+    sidebar.classList.remove('open');
+    overlay.classList.remove('show');
+  };
+
+  closeBtn.addEventListener('click', closeMenu);
+  overlay.addEventListener('click', closeMenu);
+  
+  document.querySelectorAll('.sidebar-link, .sidebar-home').forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+</script>
+
 </body>
 
 </html>

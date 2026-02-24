@@ -23,6 +23,17 @@
   font-style: normal;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; 
+}
+
 html, body {
   height: 100%;
   margin: 0;
@@ -47,6 +58,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  z-index: 3000; 
 }
 
 .sidebar::after {
@@ -121,31 +133,6 @@ body {
   letter-spacing: 0.5px;
 }
 
-@media (max-width: 700px) {
-  .sidebar {
-    width: 100vw;
-    height: auto;
-    position: relative;
-    border-right: none;
-    border-bottom: 1px solid #444;
-  }
-  .sidebar-content {
-    margin-left: 16px;
-    margin-top: 16px;
-  }
-  .sidebar-home {
-    font-size: 2rem;
-    margin-bottom: 24px;
-  }
-  .sidebar-label {
-    font-size: 0.78rem;
-  }
-  .sidebar-link {
-    font-size: 0.93rem;
-    line-height: 33px;
-  }
-}
-
 .main-content {
   margin-left: 230px;
   padding: 52px 54px 0 54px;
@@ -153,7 +140,6 @@ body {
   background: #161616;
 }
 
-/* ABOUT SECTION */
 .about-section {
   padding: 0;
   margin: 40px 0 22px 45px;
@@ -190,7 +176,6 @@ body {
   margin-top: 12px;
 }
 
-/* SKILLS SECTION */
 .skills-section {
   margin-top: 50px;
 }
@@ -234,7 +219,6 @@ body {
   cursor: default;
 }
 
-/* OUTSIDE ACADEMICS */
 .academics-title {
   font-family: 'PP Editorial New', serif;
   font-size: 35px;
@@ -278,7 +262,6 @@ body {
   border-radius: 6px; 
 }
 
-/* DESIGN GALLERY */
 .gallery-title {
   font-family: 'PP Editorial New', serif;
   font-size: 35px;
@@ -301,7 +284,6 @@ body {
   transform: scale(1.04);
 }
 
-/* MINI SLIDESHOW */
 .mini-slideshow-section {
   text-align: left;
   margin-top: 50px;
@@ -374,7 +356,6 @@ body {
   transform: translateY(0);
 }
 
-/* start of long animation css */
 body
 {
   overflow-x: hidden;
@@ -392,6 +373,60 @@ body
     background-position: right;
   }
 }
+
+.menu-toggle { display: none; position: fixed; top: 25px; left: 25px; z-index: 2000; background: none; border: none; color: white; font-size: 1.8rem; cursor: pointer; }
+.menu-close { display: none; position: absolute; top: 20px; right: 20px; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
+.overlay { display: none; position: fixed; inset: 0; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(4px); z-index: 1500; }
+.sidebar.open { transform: translateX(0) !important; }
+
+@media (max-width: 850px) {
+
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-close {
+    display: block;
+  }
+
+  .overlay.show {
+    display: block;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 80px 20px 40px 20px;
+  }
+
+  .about-section {
+    margin: 20px 0;
+  }
+
+  .about-title {
+    font-size: 32px;
+  }
+
+  .about-content p {
+    max-width: 100%;
+  }
+
+  .interests-section {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+
+}
+
+
+
+
 
 .starfall {
     position: fixed;
